@@ -1,3 +1,4 @@
+#LIBRARIES
 import torch
 from torch import nn
 
@@ -30,7 +31,7 @@ class MYCIFAR10MODEL(nn.Module):
 
         self.convStack2 = nn.Sequential(
             nn.Conv2d(
-                in_channels=inputShape,
+                in_channels=hiddenUnit,
                 out_channels=hiddenUnit,
                 kernel_size=5,
                 stride=1,
@@ -50,7 +51,7 @@ class MYCIFAR10MODEL(nn.Module):
 
         self.convStack3 = nn.Sequential(
             nn.Conv2d(
-                in_channels=inputShape,
+                in_channels=hiddenUnit,
                 out_channels=hiddenUnit,
                 kernel_size=5,
                 stride=1,
